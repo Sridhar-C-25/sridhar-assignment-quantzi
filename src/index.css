@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0D111C] text-white;
+  }
+  section {
+    @apply pt-20;
+  }
+  input,
+  button {
+    @apply outline-none;
+  }
+}
+
+input {
+  @apply border border-gray-400  rounded-md p-2.5 text-gray-900;
+}
+::placeholder {
+  @apply !text-gray-500;
+}
+.paginate {
+  @apply flex  justify-center;
+}
+.paginate li:not(:first-child, :last-child) {
+  @apply text-lg   md:w-12 md:h-12   flex items-center justify-center rounded-full;
+}
+.paginate .selected {
+  @apply md:bg-white md:text-gray-900 text-materialBlue;
+}
